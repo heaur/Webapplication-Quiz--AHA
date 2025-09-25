@@ -8,5 +8,7 @@ public class ErrorViewModel
 }
 //hallo hallo
 public class Astrid_tester_gitt{
-    
+    //astrid tester å merge git
+    public bool ShowRequestId =>
+
 }
