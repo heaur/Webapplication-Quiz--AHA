@@ -6,7 +6,3 @@ public class ErrorViewModel
 
     public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
 }
-//hallo hallo
-public class Astrid_tester_gitt{
-    
-}
