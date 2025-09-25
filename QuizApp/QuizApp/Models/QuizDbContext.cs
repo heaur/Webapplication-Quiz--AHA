@@ -3,10 +3,12 @@ using Microsoft.EntityFrameworkCore;
 namespace QuizApp.Models;
 {
     public class QuizDBContext : DbContext{
-        public QuizDBContext(DbContextOptions<>options): base(options)
+        public QuizDBContext(DbContextOptions<QuizDBContext>options): base(options)
         {
-            Database.Ensurecreated();
+            //oppretter db hvis den ikke finnes
+            Database.EnsureCreated();
         }
+        //tabell til db 
         public DbSet<Question> Questions {get; set; }
         public DbSet<Option>   Options   { get; set; }
         public DbSet<Quiz>     Quizzes   { get; set; }
