@@ -4,7 +4,7 @@ namespace QuizApp.Models
 
 
 {
-    public class Questions
+    public class Question
     {
          [Key]                                // PK
         public int QuestionId { get; set; }
