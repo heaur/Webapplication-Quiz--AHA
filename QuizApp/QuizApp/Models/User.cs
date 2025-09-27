@@ -16,7 +16,10 @@ namespace QuizApp.Models
         [MaxLength(255)]
         public string Password { get; set; }
 
-        public List<Quiz> Quizzes { get; set; }
-        public List<Result> Results { get; set; }
+        //Lists all quizzes created by the user
+        public List<Quiz> Creations { get; set; }
+
+        //Lists all quiz results taken by the user
+        public List<Result> History { get; set; }
     }
 }

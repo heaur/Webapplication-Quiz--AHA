@@ -18,6 +18,7 @@ namespace QuizApp.Models
 
         //Defines who is owner/created the Quiz
         public int OwnerId { get; set; } //FK
+        public User Owner { get; set; }
 
         //Lists all questions in the quiz
         public List<Question> Questions { get; set; }
