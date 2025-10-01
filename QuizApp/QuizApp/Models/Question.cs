@@ -6,7 +6,7 @@ namespace QuizApp.Models
 {
     public class Question
     {
-         [Key]                                // PK
+        [Key]                                // PK
         public int QuestionId { get; set; }
 
         [Required]                           // Må høre til quiz
@@ -15,6 +15,8 @@ namespace QuizApp.Models
         [Required]                           // tekst kan ikke være tom
         [MaxLength(500)]                     // Maks 500 tegn
         public string Text { get; set; }
+        
+        public int? AnswerOptionID { get;  set;}
 
         
 
