@@ -6,7 +6,7 @@ namespace QuizApp.Models
     public class Option
     {
         //pk 
-        [key]
+        [Key]
         public int OptionID { get; set; }
 
 
