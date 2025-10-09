@@ -19,11 +19,9 @@ namespace QuizApp.Models
 
         [Required]
         public int UserId { get; set; }      // Fremmednøkkel til brukeren som tok quizen
-        public User User { get; set; }       // Navigasjonsproperty til User-objektet
 
         [Required]
         public int QuizId { get; set; }      // Fremmednøkkel til hvilken quiz dette resultatet gjelder
-        public Quiz Quiz { get; set; }       // Navigasjonsproperty til Quiz-objektet
 
         // ------------------- RESULTATDATA -------------------
 
@@ -36,21 +34,15 @@ namespace QuizApp.Models
         public int TotalQuestions { get; set; }  // Totalt antall spørsmål i quizen
 
         [Required]
-        public DateTime CompletedAt { get; set; } = DateTime.UtcNow; // Når quizen ble fullført (UTC for konsistens)
+        public DateTime CompletedAt { get; set; } = DateTime.UtcNow;
 
-        // ------------------- AVLEDET FELT -------------------
+        // Navigasjonsreferanser nullable
+        public User? User { get; set; }
+        public Quiz? Quiz { get; set; }
 
-        [NotMapped] 
-        public double Percentage 
-        { 
-            get 
-            { 
-                // Returnerer prosenten riktige svar.
-                // Brukes kun i applikasjonen, lagres ikke i databasen.
-                return TotalQuestions > 0 
-                    ? (double)CorrectCount / TotalQuestions * 100.0 
-                    : 0.0; 
-            } 
-        }
+        [NotMapped]
+        public double Percentage => TotalQuestions > 0
+            ? (double)CorrectCount / TotalQuestions * 100.0
+            : 0.0;
     }
 }

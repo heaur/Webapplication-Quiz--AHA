@@ -1,8 +1,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+
 namespace QuizApp.Models
-
-
 {
     public class Question
     {
@@ -14,13 +13,13 @@ namespace QuizApp.Models
 
         [Required]                           // tekst kan ikke være tom
         [MaxLength(500)]                     // Maks 500 tegn
-        public string Text { get; set; } = string.Empty;
-        
-        public int? AnswerOptionID { get;  set;}
+        public string Text { get; set; } = string.Empty; //Default value
 
-        
+        public int? AnswerOptionID { get; set; }
 
+        public Quiz? Quiz { get; set; } //makes nullable
 
-
+        //Samling initialiserer for å unngå null referanser
+        public List<Option> Options { get; set; } = new(); //initialiserer en tom liste
     }
 }

@@ -10,13 +10,11 @@ namespace QuizApp.Models{
             Database.EnsureCreated();
         }
         //tabell til db 
-        public DbSet<Question> Questions { get; set; }
-        public DbSet<Option> Options { get; set; }
-        public DbSet<Quiz> Quizzes { get; set; }
-        public DbSet<User> Users { get; set; }
-        public DbSet<Result> Results { get; set; }
-
+        public DbSet<Question> Questions { get; set; } = default!;
+        public DbSet<Option> Options { get; set; } = default!;
+        public DbSet<Quiz> Quizzes { get; set; } = default!;
+        public DbSet<User> Users { get; set; } = default!;
+        public DbSet<Result> Results { get; set; } = default!;
     }
-
 }
 
