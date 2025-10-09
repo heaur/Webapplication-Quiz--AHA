@@ -14,7 +14,7 @@ namespace QuizApp.Models
 
         [Required]                           // tekst kan ikke være tom
         [MaxLength(500)]                     // Maks 500 tegn
-        public string Text { get; set; }
+        public string Text { get; set; } = string.Empty;
         
         public int? AnswerOptionID { get;  set;}
 
