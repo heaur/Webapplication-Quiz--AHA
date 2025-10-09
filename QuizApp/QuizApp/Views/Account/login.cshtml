@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] = "Logg inn";
+    Layout = "_Layout";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post">
+    <div>
+        <label for="username">Brukernavn:</label>
+        <input type="text" id="username" name="username" />
+    </div>
+    <div>
+        <label for="password">Passord:</label>
+        <input type="password" id="password" name="password" />
+    </div>
+    <button type="submit">Logg inn</button>
+</form>
