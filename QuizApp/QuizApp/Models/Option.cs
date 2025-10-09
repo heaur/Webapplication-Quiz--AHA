@@ -21,6 +21,8 @@ namespace QuizApp.Models
         //if the alternativ is corect 
         [Required]
         public bool IsCorrect { get; set; }
+
+        public Question? Question{ get; set; } //makes nullable
     }
     
 }
