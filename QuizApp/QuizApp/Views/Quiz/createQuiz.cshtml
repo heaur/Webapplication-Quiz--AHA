@@ -1,0 +1,19 @@
+@{
+    ViewData["Title"] = "Opprett Quiz";
+    Layout = "_Layout";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+Create
+<form asp-action="Create" method="post">
+    <div>
+        <label for="title">Quiz-tittel:</label>
+        <input type="text" id="title" name="title" />
+    </div>
+    <div>
+        <label for="description">Beskrivelse:</label>
+        <textarea id="description" name="description"></textarea>
+    </div>
+    <button type="submit">Opprett</button>
+</form>
