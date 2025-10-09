@@ -9,10 +9,7 @@ namespace QuizApp.Models
         [Key]
         public int OptionID { get; set; }
 
-
-
         //FK
-
         [Required]
         public int QuestionId { get; set; }
 
