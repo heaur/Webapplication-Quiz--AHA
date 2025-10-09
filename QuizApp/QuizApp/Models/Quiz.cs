@@ -10,7 +10,7 @@ namespace QuizApp.Models
 
         [Required]
         [MaxLength(55)]
-        public string Title { get; set; } = string.Empty //default value
+        public string Title { get; set; } = string.Empty; //default value
 
         [MaxLength(255)]
         public string? Description { get; set; } //makes nullable
