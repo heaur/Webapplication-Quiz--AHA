@@ -9,49 +9,47 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = QuizApp
 build_property.RootNamespace = QuizApp
-build_property.ProjectDir = /Users/alisaibisevic/Desktop/ITPE3200 - Webapplikasjoner/Webapplication-Quiz--AHA/QuizApp/QuizApp/
+build_property.ProjectDir = C:\Users\Hedda\OneDrive\01 Anvendt data\5. Semester\ITPE3200\Webapplication Quiz, AHA\QuizApp\QuizApp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/alisaibisevic/Desktop/ITPE3200 - Webapplikasjoner/Webapplication-Quiz--AHA/QuizApp/QuizApp
+build_property.MSBuildProjectDirectory = C:\Users\Hedda\OneDrive\01 Anvendt data\5. Semester\ITPE3200\Webapplication Quiz, AHA\QuizApp\QuizApp
 build_property._RazorSourceGeneratorDebug = 
-build_property.EffectiveAnalysisLevelStyle = 8.0
-build_property.EnableCodeStyleSeverity = 
 
-[/Users/alisaibisevic/Desktop/ITPE3200 - Webapplikasjoner/Webapplication-Quiz--AHA/QuizApp/QuizApp/Views/Account/login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9sb2dpbi5jc2h0bWw=
+[C:/Users/Hedda/OneDrive/01 Anvendt data/5. Semester/ITPE3200/Webapplication Quiz\, AHA/QuizApp/QuizApp/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/alisaibisevic/Desktop/ITPE3200 - Webapplikasjoner/Webapplication-Quiz--AHA/QuizApp/QuizApp/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+[C:/Users/Hedda/OneDrive/01 Anvendt data/5. Semester/ITPE3200/Webapplication Quiz\, AHA/QuizApp/QuizApp/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/alisaibisevic/Desktop/ITPE3200 - Webapplikasjoner/Webapplication-Quiz--AHA/QuizApp/QuizApp/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+[C:/Users/Hedda/OneDrive/01 Anvendt data/5. Semester/ITPE3200/Webapplication Quiz\, AHA/QuizApp/QuizApp/Views/Quiz/CreateQuiz.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVpelxDcmVhdGVRdWl6LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/alisaibisevic/Desktop/ITPE3200 - Webapplikasjoner/Webapplication-Quiz--AHA/QuizApp/QuizApp/Views/Quiz/createQuiz.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVpei9jcmVhdGVRdWl6LmNzaHRtbA==
+[C:/Users/Hedda/OneDrive/01 Anvendt data/5. Semester/ITPE3200/Webapplication Quiz\, AHA/QuizApp/QuizApp/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/alisaibisevic/Desktop/ITPE3200 - Webapplikasjoner/Webapplication-Quiz--AHA/QuizApp/QuizApp/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+[C:/Users/Hedda/OneDrive/01 Anvendt data/5. Semester/ITPE3200/Webapplication Quiz\, AHA/QuizApp/QuizApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/alisaibisevic/Desktop/ITPE3200 - Webapplikasjoner/Webapplication-Quiz--AHA/QuizApp/QuizApp/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[C:/Users/Hedda/OneDrive/01 Anvendt data/5. Semester/ITPE3200/Webapplication Quiz\, AHA/QuizApp/QuizApp/Views/User/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/alisaibisevic/Desktop/ITPE3200 - Webapplikasjoner/Webapplication-Quiz--AHA/QuizApp/QuizApp/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[C:/Users/Hedda/OneDrive/01 Anvendt data/5. Semester/ITPE3200/Webapplication Quiz\, AHA/QuizApp/QuizApp/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/alisaibisevic/Desktop/ITPE3200 - Webapplikasjoner/Webapplication-Quiz--AHA/QuizApp/QuizApp/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+[C:/Users/Hedda/OneDrive/01 Anvendt data/5. Semester/ITPE3200/Webapplication Quiz\, AHA/QuizApp/QuizApp/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/alisaibisevic/Desktop/ITPE3200 - Webapplikasjoner/Webapplication-Quiz--AHA/QuizApp/QuizApp/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-qj0hzr70tq
+[C:/Users/Hedda/OneDrive/01 Anvendt data/5. Semester/ITPE3200/Webapplication Quiz\, AHA/QuizApp/QuizApp/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-5pfx37we21
