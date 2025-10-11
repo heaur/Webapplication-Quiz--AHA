@@ -32,6 +32,38 @@
 //Creates a horizontal line to separate the input fields
     <hr />
 
+  <h3>Questions</h3>
+
+    <div id="questionsContainer">
+        @* This div will contain the questions for the quiz *@
+        @for (int q = 0; q < Model.Questions.Count; q++)
+        {
+            <div class="question-block" data-question-index="@q">
+                <label>Question @(q+1)</label>
+                <input typ="text" name="Questions[@q].Text" value="@Model.Questions[q].Text" />
+
+                <div class="options-container">
+                    @for (int o = 0; 0 <Model.Questions[q].Options.Count; o++)
+                    {
+                        <div class="option-row" data-oindex="@o">
+                            <input type="text" name = "Questions[@q].Options[@o].Text" value="@Model.Questions[q].Options[o].Text" />
+                            <label>
+                                <input type="checkbox" name="Questions[@q].Options[@o].IsCorrect" value =true"
+                                    @(Model.Questions[q].Options[o].IsCorrect ? "checked" : "") />
+                                    Correct
+                            </label>
+                            <button type="button" class="remove-option">Remove option</button>
+                        </div>
+                    }
+                    <button type="button" class="add-option">Add option</button>
+                </div>
+
+                <button type="button" class="remove-questions">Remove question</button>
+                <hr />
+            </div>
+        }
+        
+    </div>
 
     //Submit button to create and save the quiz
     <button type="submit">Create</button>
