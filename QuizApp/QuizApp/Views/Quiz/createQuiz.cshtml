@@ -8,23 +8,23 @@
 */Page title */
 <h2>@ViewData["Title"]</h2>
 
-*/form uses the CreateQuiz action in the Quiz controller*/
+@*form uses the CreateQuiz action in the Quiz controller*@
 <form asp-action="CreateQuiz" method="post">
     @Html.AntiForgeryToken()
 
-    */This div creates an input where user can create title for the quiz*/
+    @*This div creates an input where user can create title for the quiz*@
     <div>
         <label for="Title">Quiz title:</label>
         <input type="text" id="title" name="Title" value="@Model?.Title" />
     </div>
 
-    */This div creates a textarea where user can create a description for the quiz*/
+    @*This div creates a textarea where user can create a description for the quiz*@
     <div>
         <label for="Description">description</label>
         <textarea id="description" name="Description">@Model?.Description</textarea>
     </div>
 
-    */Creates a horizontal line to separate the input fields*/
+    @*Creates a horizontal line to separate the input fields*@
     <hr />
 
     <h3>Questions</h3>
@@ -69,7 +69,7 @@
     </div>
 </form>
 
-*/Templates (hidden) This section contains the HTML templates for dynamically adding questions and options*/
+@* These templates are cloned and modified by JavaScript when the user adds new questions or options *@
 <div id="templates" style="display:none;">
     <div id="questionTemplate">
         <div class="question-block" data-qindex="__QINDEX__">
@@ -94,7 +94,7 @@
     </div>
 </div>
 
-*/JavaScript section to handle dynamic addition and removal of questions and options*/
+@*JavaScript section to handle dynamic addition and removal of questions and options *@
 @section Scripts {
 <script>
 (function() {
