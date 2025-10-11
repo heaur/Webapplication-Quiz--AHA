@@ -1,9 +1,32 @@
 using Microsoft.AspNetCore.Mvc;
+using QuizApp.Models;
 
-public class QuizController : Controller
+namespace QuizApp.Controllers
 {
-    public IActionResult Create()
+    // Controller for managing quizzes
+    public class QuizController : Controller
     {
-        return View(); // viser Views/Quiz/Create.cshtml
+        //A Get method to create a new quiz with variables from models
+        [HttpGet]
+        public IActionResult Create()
+        {
+            var quiz = new Quiz
+            {
+                Questions = new List<Question>
+                {
+                    new Question
+                    {
+                        Options = new List<Option>
+                        {
+                            new Option(),
+                            new Option()
+                        }
+                    }
+                }
+            };
+            return View(quiz);
+        }
+
+        
     }
-}
+}   
