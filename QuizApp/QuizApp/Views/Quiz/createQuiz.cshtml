@@ -1,19 +1,39 @@
+@model QuizApp.Models.Quiz
+
+<head>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />
+    <title>Create Quiz</title>
+</head>
+<body>
 @{
-    ViewData["Title"] = "Opprett Quiz";
+    ViewData["Title"] = "Create Quiz";
     Layout = "_Layout";
 }
 
+//Page title 
 <h2>@ViewData["Title"]</h2>
 
-Create
+//form uses the Create action in the Quiz controller
 <form asp-action="Create" method="post">
+  @Html.AntiForgeryToken()
+
+//This div creates an input where user can create title for the quiz
     <div>
-        <label for="title">Quiz-tittel:</label>
-        <input type="text" id="title" name="title" />
+        <label for="Title">Quiz title:</label>
+        <input type="Text" id="title" name="title" />
     </div>
+
+//This div creates a textarea where user can create a description for the quiz
     <div>
-        <label for="description">Beskrivelse:</label>
+        <label for="description">description</label>
         <textarea id="description" name="description"></textarea>
     </div>
-    <button type="submit">Opprett</button>
+
+//Creates a horizontal line to separate the input fields
+    <hr />
+
+
+    //Submit button to create and save the quiz
+    <button type="submit">Create</button>
 </form>
+</body>
