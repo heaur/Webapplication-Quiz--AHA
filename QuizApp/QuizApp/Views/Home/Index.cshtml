@@ -1,14 +1,22 @@
-﻿@{
-    ViewData["Title"] = "Velkommen";
+﻿<head>
+    <title>Home Page</title>
+</head>
+
+<body>
+
+@{
+    ViewData["Title"] = "Welcome";
     Layout = "_Layout";
 }
 
-<h1>Velkommen til QuizApp!</h1>
-<p>Velg en handling:</p>
+<h1>Welcome to QuizApp!</h1>
+<p>Choose an action:</p>
 
 <ul>
    <ul>
-    <li><a asp-controller="AccountController" asp-action="Login">Logg inn</a></li>
-    <li><a asp-controller="QuizController" asp-action="Index">Quiz</a></li>
+    <li><a asp-controller="User" asp-action="Login">Log in</a></li>
+    <li><a asp-controller="Quiz" asp-action="Index">Create quiz</a></li>
 </ul>
+
+</body>
 
