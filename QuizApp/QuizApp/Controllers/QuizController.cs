@@ -27,6 +27,21 @@ namespace QuizApp.Controllers
             return View(quiz);
         }
 
-        
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Quiz quiz)
+        {
+            if (ModelState.IsValid)
+            {
+                // Here you would typically save the quiz to a database
+                // For this example, we'll just redirect to a confirmation page
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                // If the model state is invalid, return the same view with the current quiz data
+                return View(quiz);
+            }
+        }
     }
 }   
