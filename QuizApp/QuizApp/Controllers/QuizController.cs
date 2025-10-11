@@ -8,7 +8,7 @@ namespace QuizApp.Controllers
     {
         //A Get method to create a new quiz with variables from models
         [HttpGet]
-        public IActionResult Create()
+        public IActionResult CreateQuiz()
         {
             var quiz = new Quiz
             {
@@ -29,7 +29,7 @@ namespace QuizApp.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Quiz quiz)
+        public IActionResult CreateQuiz(Quiz quiz)
         {
             if (ModelState.IsValid)
             {
