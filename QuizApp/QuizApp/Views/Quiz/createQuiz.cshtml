@@ -71,4 +71,126 @@
         <button type="submit">Create</button>
     </div>
 </form>
+
+//Templates (hidden) This section contains the HTML templates for dynamically adding questions and options
+<div id="templates" style="display:none;">
+    <div id="questionTemplate">
+        <div class="question-block" data-qindex="__QINDEX__">
+            <label>Spørsmål __QNUM__:</label>
+            <input type="text" name="Questions[__QINDEX__].Text" value="" />
+
+            <div class="options-container">
+                <div class="option-row" data-oindex="0">
+                    <input type="text" name="Questions[__QINDEX__].Options[0].Text" value="" />
+                    <label>
+                        <input type="checkbox" name="Questions[__QINDEX__].Options[0].IsCorrect" value="true" />
+                        Riktig
+                    </label>
+                    <button type="button" class="remove-option">Fjern alternativ</button>
+                </div>
+                <button type="button" class="add-option">Legg til alternativ</button>
+            </div>
+
+            <button type="button" class="remove-question">Fjern spørsmål</button>
+            <hr />
+        </div>
+    </div>
+</div>
+
+//JavaScript section to handle dynamic addition and removal of questions and options
+@section Scripts {
+<script>
+(function() {
+    const questionsContainer = document.getElementById('questionsContainer');
+    const addQuestionBtn = document.getElementById('addQuestion');
+    const questionTemplateHtml = document.getElementById('questionTemplate').innerHTML;
+
+    function updateQuestionIndices() {
+        const questionBlocks = questionsContainer.querySelectorAll('.question-block');
+        questionBlocks.forEach((qb, qi) => {
+            qb.setAttribute('data-qindex', qi);
+            // update label
+            const label = qb.querySelector('label');
+            if (label) label.textContent = 'Spørsmål ' + (qi + 1) + ':';
+            // update input names for question text
+            const qText = qb.querySelector('input[type="text"]:not(.option-text)');
+            if (qText) qText.name = `Questions[${qi}].Text`;
+
+            // Update options inside this question
+            const optionRows = qb.querySelectorAll('.option-row');
+            optionRows.forEach((or, oi) => {
+                or.setAttribute('data-oindex', oi);
+                const textInput = or.querySelector('input[type="text"]');
+                const checkbox = or.querySelector('input[type="checkbox"]');
+                if (textInput) textInput.name = `Questions[${qi}].Options[${oi}].Text`;
+                if (checkbox) checkbox.name = `Questions[${qi}].Options[${oi}].IsCorrect`;
+            });
+        });
+    }
+
+    function addQuestion() {
+        // determine new index
+        const newIndex = questionsContainer.querySelectorAll('.question-block').length;
+        let html = questionTemplateHtml.replace(/__QINDEX__/g, newIndex).replace(/__QNUM__/g, newIndex + 1);
+        const wrapper = document.createElement('div');
+        wrapper.innerHTML = html;
+        // append the new question block (first child)
+        const newBlock = wrapper.firstElementChild;
+        questionsContainer.appendChild(newBlock);
+        attachQuestionButtons(newBlock);
+        updateQuestionIndices();
+    }
+
+    function attachQuestionButtons(questionElem) {
+        // add-option button inside question
+        const addOptBtn = questionElem.querySelector('.add-option');
+        addOptBtn.addEventListener('click', () => {
+            const optionsContainer = questionElem.querySelector('.options-container');
+            const optionRows = optionsContainer.querySelectorAll('.option-row');
+            const nextOIndex = optionRows.length;
+            // create new option row element
+            const or = document.createElement('div');
+            or.className = 'option-row';
+            or.setAttribute('data-oindex', nextOIndex);
+            or.innerHTML = `
+                <input type="text" name="Questions[${questionElem.getAttribute('data-qindex')}].Options[${nextOIndex}].Text" value="" />
+                <label><input type="checkbox" name="Questions[${questionElem.getAttribute('data-qindex')}].Options[${nextOIndex}].IsCorrect" value="true" /> Riktig</label>
+                <button type="button" class="remove-option">Fjern alternativ</button>
+            `;
+            // insert before the add-option button
+            optionsContainer.insertBefore(or, addOptBtn);
+            attachOptionRemove(or);
+            updateQuestionIndices();
+        });
+
+        // remove-question button
+        const removeQBtn = questionElem.querySelector('.remove-question');
+        removeQBtn.addEventListener('click', () => {
+            questionElem.remove();
+            updateQuestionIndices();
+        });
+
+        // attach remove for existing options in this block
+        questionElem.querySelectorAll('.option-row').forEach(attachOptionRemove);
+    }
+
+    function attachOptionRemove(optionElem) {
+        const removeBtn = optionElem.querySelector('.remove-option');
+        if (removeBtn) {
+            removeBtn.addEventListener('click', () => {
+                optionElem.remove();
+                updateQuestionIndices();
+            });
+        }
+    }
+
+    // Attach handlers for initially rendered questions
+    document.querySelectorAll('.question-block').forEach(qb => attachQuestionButtons(qb));
+
+    // Add question button
+    addQuestionBtn.addEventListener('click', addQuestion);
+})();
+</script>
+}
+
 </body>
