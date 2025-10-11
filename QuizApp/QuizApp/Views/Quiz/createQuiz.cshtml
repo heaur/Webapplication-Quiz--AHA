@@ -1,10 +1,5 @@
 @model QuizApp.Models.Quiz
 
-<head>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />
-    <title>Create Quiz</title>
-</head>
-<body>
 @{
     ViewData["Title"] = "Create Quiz";
     Layout = "_Layout";
@@ -15,54 +10,56 @@
 
 //form uses the Create action in the Quiz controller
 <form asp-action="Create" method="post">
-  @Html.AntiForgeryToken()
+    @Html.AntiForgeryToken()
 
-//This div creates an input where user can create title for the quiz
+    //This div creates an input where user can create title for the quiz
     <div>
         <label for="Title">Quiz title:</label>
-        <input type="Text" id="title" name="title" />
+        <input type="text" id="title" name="Title" value="@Model?.Title" />
     </div>
 
-//This div creates a textarea where user can create a description for the quiz
+    //This div creates a textarea where user can create a description for the quiz
     <div>
-        <label for="description">description</label>
-        <textarea id="description" name="description"></textarea>
+        <label for="Description">description</label>
+        <textarea id="description" name="Description">@Model?.Description</textarea>
     </div>
 
-//Creates a horizontal line to separate the input fields
+    //Creates a horizontal line to separate the input fields
     <hr />
 
-  <h3>Questions</h3>
+    <h3>Questions</h3>
 
     <div id="questionsContainer">
         @* This div will contain the questions for the quiz *@
-        @for (int q = 0; q < Model.Questions.Count; q++)
+        @if (Model?.Questions != null)
         {
-            <div class="question-block" data-question-index="@q">
-                <label>Question @(q+1)</label>
-                <input typ="text" name="Questions[@q].Text" value="@Model.Questions[q].Text" />
+            @for (int q = 0; q < Model.Questions.Count; q++)
+            {
+                <div class="question-block" data-question-index="@q">
+                    <label>Question @(q + 1)</label>
+                    <input type="text" name="Questions[@q].Text" value="@Model.Questions[q].Text" class="question-text" />
 
-                <div class="options-container">
-                    @for (int o = 0; 0 <Model.Questions[q].Options.Count; o++)
-                    {
-                        <div class="option-row" data-oindex="@o">
-                            <input type="text" name = "Questions[@q].Options[@o].Text" value="@Model.Questions[q].Options[o].Text" />
-                            <label>
-                                <input type="checkbox" name="Questions[@q].Options[@o].IsCorrect" value =true"
-                                    @(Model.Questions[q].Options[o].IsCorrect ? "checked" : "") />
+                    <div class="options-container">
+                        @for (int o = 0; o < Model.Questions[q].Options.Count; o++)
+                        {
+                            <div class="option-row" data-oindex="@o">
+                                <input type="text" name="Questions[@q].Options[@o].Text" value="@Model.Questions[q].Options[o].Text" class="option-text" />
+                                <label>
+                                    <input type="checkbox" name="Questions[@q].Options[@o].IsCorrect" value="true"
+                                        @(Model.Questions[q].Options[o].IsCorrect ? "checked" : "") />
                                     Correct
-                            </label>
-                            <button type="button" class="remove-option">Remove option</button>
-                        </div>
-                    }
-                    <button type="button" class="add-option">Add option</button>
-                </div>
+                                </label>
+                                <button type="button" class="remove-option">Remove option</button>
+                            </div>
+                        }
+                        <button type="button" class="add-option">Add option</button>
+                    </div>
 
-                <button type="button" class="remove-questions">Remove question</button>
-                <hr />
-            </div>
+                    <button type="button" class="remove-question">Remove question</button>
+                    <hr />
+                </div>
+            }
         }
-        
     </div>
 
     <button type="button" id="addQuestion">Add Question</button>
@@ -77,11 +74,11 @@
     <div id="questionTemplate">
         <div class="question-block" data-qindex="__QINDEX__">
             <label>Question __QNUM__:</label>
-            <input type="text" name="Questions[__QINDEX__].Text" value="" />
+            <input type="text" name="Questions[__QINDEX__].Text" value="" class="question-text" />
 
             <div class="options-container">
                 <div class="option-row" data-oindex="0">
-                    <input type="text" name="Questions[__QINDEX__].Options[0].Text" value="" />
+                    <input type="text" name="Questions[__QINDEX__].Options[0].Text" value="" class="option-text" />
                     <label>
                         <input type="checkbox" name="Questions[__QINDEX__].Options[0].IsCorrect" value="true" />
                         Correct
@@ -115,14 +112,14 @@
             if (label) label.textContent = 'Question ' + (qi + 1) + ':';
 
             // update input names for question text
-            const qText = qb.querySelector('input[type="text"]:not(.option-text)');
+            const qText = qb.querySelector('.question-text');
             if (qText) qText.name = `Questions[${qi}].Text`;
 
             // Update options inside this question
             const optionRows = qb.querySelectorAll('.option-row');
             optionRows.forEach((or, oi) => {
                 or.setAttribute('data-oindex', oi);
-                const textInput = or.querySelector('input[type="text"]');
+                const textInput = or.querySelector('.option-text');
                 const checkbox = or.querySelector('input[type="checkbox"]');
                 if (textInput) textInput.name = `Questions[${qi}].Options[${oi}].Text`;
                 if (checkbox) checkbox.name = `Questions[${qi}].Options[${oi}].IsCorrect`;
@@ -130,9 +127,8 @@
         });
     }
 
-// Function to add a new question block
+    // Function to add a new question block
     function addQuestion() {
-
         // determine new index
         const newIndex = questionsContainer.querySelectorAll('.question-block').length;
         let html = questionTemplateHtml.replace(/__QINDEX__/g, newIndex).replace(/__QNUM__/g, newIndex + 1);
@@ -146,45 +142,49 @@
         updateQuestionIndices();
     }
 
-
-// Attach event listeners to buttons within a question block
+    // Attach event listeners to buttons within a question block
     function attachQuestionButtons(questionElem) {
 
         // add-option button inside question
         const addOptBtn = questionElem.querySelector('.add-option');
-        addOptBtn.addEventListener('click', () => {
-            const optionsContainer = questionElem.querySelector('.options-container');
-            const optionRows = optionsContainer.querySelectorAll('.option-row');
-            const nextOIndex = optionRows.length;
+        if (addOptBtn) {
+            addOptBtn.addEventListener('click', () => {
+                const optionsContainer = questionElem.querySelector('.options-container');
+                const optionRows = optionsContainer.querySelectorAll('.option-row');
+                const nextOIndex = optionRows.length;
+                const qIndex = parseInt(questionElem.getAttribute('data-qindex'));
 
-            // create new option row element
-            const or = document.createElement('div');
-            or.className = 'option-row';
-            or.setAttribute('data-oindex', nextOIndex);
-            or.innerHTML = `
-                <input type="text" name="Questions[${questionElem.getAttribute('data-qindex')}].Options[${nextOIndex}].Text" value="" />
-                <label><input type="checkbox" name="Questions[${questionElem.getAttribute('data-qindex')}].Options[${nextOIndex}].IsCorrect" value="true" /> Riktig</label>
-                <button type="button" class="remove-option">Remove option</button>
-            `;
-            
-            // insert before the add-option button
-            optionsContainer.insertBefore(or, addOptBtn);
-            attachOptionRemove(or);
-            updateQuestionIndices();
-        });
+                // create new option row element
+                const or = document.createElement('div');
+                or.className = 'option-row';
+                or.setAttribute('data-oindex', nextOIndex);
+                or.innerHTML = `
+                    <input type="text" name="Questions[${qIndex}].Options[${nextOIndex}].Text" value="" class="option-text" />
+                    <label><input type="checkbox" name="Questions[${qIndex}].Options[${nextOIndex}].IsCorrect" value="true" /> Correct</label>
+                    <button type="button" class="remove-option">Remove option</button>
+                `;
+                
+                // insert before the add-option button
+                optionsContainer.insertBefore(or, addOptBtn);
+                attachOptionRemove(or);
+                updateQuestionIndices();
+            });
+        }
 
         // remove-question button
         const removeQBtn = questionElem.querySelector('.remove-question');
-        removeQBtn.addEventListener('click', () => {
-            questionElem.remove();
-            updateQuestionIndices();
-        });
+        if (removeQBtn) {
+            removeQBtn.addEventListener('click', () => {
+                questionElem.remove();
+                updateQuestionIndices();
+            });
+        }
 
         // attach remove for existing options in this block
         questionElem.querySelectorAll('.option-row').forEach(attachOptionRemove);
     }
 
-// Attach remove handler to an option row
+    // Attach remove handler to an option row
     function attachOptionRemove(optionElem) {
         const removeBtn = optionElem.querySelector('.remove-option');
         if (removeBtn) {
@@ -199,9 +199,7 @@
     document.querySelectorAll('.question-block').forEach(qb => attachQuestionButtons(qb));
 
     // Add question button
-    addQuestionBtn.addEventListener('click', addQuestion);
+    if (addQuestionBtn) addQuestionBtn.addEventListener('click', addQuestion);
 })();
 </script>
 }
-
-</body>
