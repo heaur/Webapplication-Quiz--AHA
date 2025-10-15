@@ -126,7 +126,7 @@
           }
         }
       },
-      "Microsoft.Data.Sqlite.Core/8.0.20": {
+      "Microsoft.Data.Sqlite.Core/8.0.21": {
         "type": "package",
         "dependencies": {
           "SQLitePCLRaw.core": "2.1.6"
@@ -199,10 +199,10 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Sqlite/8.0.20": {
+      "Microsoft.EntityFrameworkCore.Sqlite/8.0.21": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Sqlite.Core": "8.0.20",
+          "Microsoft.EntityFrameworkCore.Sqlite.Core": "8.0.21",
           "SQLitePCLRaw.bundle_e_sqlite3": "2.1.6"
         },
         "compile": {
@@ -212,11 +212,11 @@
           "lib/net8.0/_._": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Sqlite.Core/8.0.20": {
+      "Microsoft.EntityFrameworkCore.Sqlite.Core/8.0.21": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Data.Sqlite.Core": "8.0.20",
-          "Microsoft.EntityFrameworkCore.Relational": "8.0.20",
+          "Microsoft.Data.Sqlite.Core": "8.0.21",
+          "Microsoft.EntityFrameworkCore.Relational": "8.0.21",
           "Microsoft.Extensions.DependencyModel": "8.0.2"
         },
         "compile": {
@@ -1409,10 +1409,10 @@
         "runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll"
       ]
     },
-    "Microsoft.Data.Sqlite.Core/8.0.20": {
-      "sha512": "rsceqxvqaCKbASZahYa8chNdEtCghU2JErugi+Ngs/ds2QJrQixsSomGSFCR7219xQXMiz2pSrWshwm/DHqqNw==",
+    "Microsoft.Data.Sqlite.Core/8.0.21": {
+      "sha512": "a8PghOiQP0QKGkbYl2Vu9IqOrqWDPBCPOSdfglNRbUezis0agAEs+S5dqdoSPSIR9dJavKNxjsDJR2U+bN6HzQ==",
       "type": "package",
-      "path": "microsoft.data.sqlite.core/8.0.20",
+      "path": "microsoft.data.sqlite.core/8.0.21",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1424,7 +1424,7 @@
         "lib/net8.0/Microsoft.Data.Sqlite.xml",
         "lib/netstandard2.0/Microsoft.Data.Sqlite.dll",
         "lib/netstandard2.0/Microsoft.Data.Sqlite.xml",
-        "microsoft.data.sqlite.core.8.0.20.nupkg.sha512",
+        "microsoft.data.sqlite.core.8.0.21.nupkg.sha512",
         "microsoft.data.sqlite.core.nuspec"
       ]
     },
@@ -1488,24 +1488,24 @@
         "microsoft.entityframeworkcore.relational.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Sqlite/8.0.20": {
-      "sha512": "mfN7QNt7vJAsPSfSTK+U9NDYaqKwl43MSKRZeSaNLAEEn5vCSyu3A58/wdTxE0K61IkiASZBtPmXRXFgZtzqbA==",
+    "Microsoft.EntityFrameworkCore.Sqlite/8.0.21": {
+      "sha512": "MaDcIErHWXfI2TB4iKerSSgtBgxW8YAectpavVN2bUT/NzsCK4blvnjBucEeh1jCv7QnY/Gqo0tbtl2UKe7evQ==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.sqlite/8.0.20",
+      "path": "microsoft.entityframeworkcore.sqlite/8.0.21",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "PACKAGE.md",
         "lib/net8.0/_._",
-        "microsoft.entityframeworkcore.sqlite.8.0.20.nupkg.sha512",
+        "microsoft.entityframeworkcore.sqlite.8.0.21.nupkg.sha512",
         "microsoft.entityframeworkcore.sqlite.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Sqlite.Core/8.0.20": {
-      "sha512": "8M2SSavQ5q4c1Lk/wUGB9WRvfUdYuRHNa2dYUmQUxAL2rKSBdJSX6DBWTVaNW11MNxr0yqSNSHuscEkRajBS3g==",
+    "Microsoft.EntityFrameworkCore.Sqlite.Core/8.0.21": {
+      "sha512": "KVnL6RbQkFOlRCu/cL7RA4GANOEdGU5R9jG09lQJ2227RPvZ7Cq+LwfhRZDqyLWA6fp5F6EVbYzhyW0pcih5hA==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.sqlite.core/8.0.20",
+      "path": "microsoft.entityframeworkcore.sqlite.core/8.0.21",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1513,7 +1513,7 @@
         "PACKAGE.md",
         "lib/net8.0/Microsoft.EntityFrameworkCore.Sqlite.dll",
         "lib/net8.0/Microsoft.EntityFrameworkCore.Sqlite.xml",
-        "microsoft.entityframeworkcore.sqlite.core.8.0.20.nupkg.sha512",
+        "microsoft.entityframeworkcore.sqlite.core.8.0.21.nupkg.sha512",
         "microsoft.entityframeworkcore.sqlite.core.nuspec"
       ]
     },
@@ -3158,19 +3158,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Hedda\\.nuget\\packages\\": {}
+    "/Users/alisaibisevic/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hedda\\OneDrive\\01 Anvendt data\\5. Semester\\ITPE3200\\Webapplication Quiz, AHA\\QuizApp\\QuizApp\\QuizApp.csproj",
+      "projectUniqueName": "/Users/alisaibisevic/Desktop/ITPE3200 - Webapplikasjoner/Webapplication-Quiz--AHA/QuizApp/QuizApp/QuizApp.csproj",
       "projectName": "QuizApp",
-      "projectPath": "C:\\Users\\Hedda\\OneDrive\\01 Anvendt data\\5. Semester\\ITPE3200\\Webapplication Quiz, AHA\\QuizApp\\QuizApp\\QuizApp.csproj",
-      "packagesPath": "C:\\Users\\Hedda\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hedda\\OneDrive\\01 Anvendt data\\5. Semester\\ITPE3200\\Webapplication Quiz, AHA\\QuizApp\\QuizApp\\obj\\",
+      "projectPath": "/Users/alisaibisevic/Desktop/ITPE3200 - Webapplikasjoner/Webapplication-Quiz--AHA/QuizApp/QuizApp/QuizApp.csproj",
+      "packagesPath": "/Users/alisaibisevic/.nuget/packages/",
+      "outputPath": "/Users/alisaibisevic/Desktop/ITPE3200 - Webapplikasjoner/Webapplication-Quiz--AHA/QuizApp/QuizApp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Hedda\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/alisaibisevic/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -3193,7 +3193,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -3219,6 +3220,20 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.20, 8.0.20]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.osx-arm64",
+            "version": "[8.0.20, 8.0.20]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.20, 8.0.20]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -3227,7 +3242,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.413/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
