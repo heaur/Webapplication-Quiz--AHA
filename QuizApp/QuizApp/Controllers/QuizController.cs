@@ -6,6 +6,9 @@ namespace QuizApp.Controllers
     // Controller for managing quizzes
     public class QuizController : Controller
     {
+        //conecting the database
+         private readonly QuizDBContext _db;
+        public QuizController(QuizDBContext db) => _db = db; 
         //A Get method to create a new quiz with variables from models
         [HttpGet]
         public IActionResult CreateQuiz()
