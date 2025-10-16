@@ -1,11 +1,5 @@
-﻿<head>
-    <title>Home Page</title>
-</head>
-
-<body>
-
-@{
-    ViewData["Title"] = "Welcome";
+﻿@{
+    ViewData["Title"] = "Home Page";
     Layout = "_Layout";
 }
 
@@ -13,10 +7,6 @@
 <p>Choose an action:</p>
 
 <ul>
-   <ul>
     <li><a asp-controller="User" asp-action="Login">Log in</a></li>
-    <li><a asp-controller="Quiz" asp-action="CreateQuiz">Create quiz</a></li>
-</ul>
-
-</body>
-
+    <li><a asp-controller="Quiz" asp-action="Create">Create quiz</a></li>
+</ul> 
