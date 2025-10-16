@@ -9,7 +9,7 @@
       "QuizApp/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.9",
-          "Microsoft.EntityFrameworkCore.Sqlite": "8.0.20"
+          "Microsoft.EntityFrameworkCore.Sqlite": "8.0.21"
         },
         "runtime": {
           "QuizApp.dll": {}
@@ -120,14 +120,14 @@
           }
         }
       },
-      "Microsoft.Data.Sqlite.Core/8.0.20": {
+      "Microsoft.Data.Sqlite.Core/8.0.21": {
         "dependencies": {
           "SQLitePCLRaw.core": "2.1.6"
         },
         "runtime": {
           "lib/net8.0/Microsoft.Data.Sqlite.dll": {
-            "assemblyVersion": "8.0.20.0",
-            "fileVersion": "8.0.2025.41910"
+            "assemblyVersion": "8.0.21.0",
+            "fileVersion": "8.0.2125.47512"
           }
         }
       },
@@ -168,22 +168,22 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Sqlite/8.0.20": {
+      "Microsoft.EntityFrameworkCore.Sqlite/8.0.21": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Sqlite.Core": "8.0.20",
+          "Microsoft.EntityFrameworkCore.Sqlite.Core": "8.0.21",
           "SQLitePCLRaw.bundle_e_sqlite3": "2.1.6"
         }
       },
-      "Microsoft.EntityFrameworkCore.Sqlite.Core/8.0.20": {
+      "Microsoft.EntityFrameworkCore.Sqlite.Core/8.0.21": {
         "dependencies": {
-          "Microsoft.Data.Sqlite.Core": "8.0.20",
+          "Microsoft.Data.Sqlite.Core": "8.0.21",
           "Microsoft.EntityFrameworkCore.Relational": "9.0.9",
           "Microsoft.Extensions.DependencyModel": "8.0.2"
         },
         "runtime": {
           "lib/net8.0/Microsoft.EntityFrameworkCore.Sqlite.dll": {
-            "assemblyVersion": "8.0.20.0",
-            "fileVersion": "8.0.2025.41910"
+            "assemblyVersion": "8.0.21.0",
+            "fileVersion": "8.0.2125.47512"
           }
         }
       },
@@ -841,12 +841,12 @@
       "path": "microsoft.data.sqlclient.sni.runtime/5.1.1",
       "hashPath": "microsoft.data.sqlclient.sni.runtime.5.1.1.nupkg.sha512"
     },
-    "Microsoft.Data.Sqlite.Core/8.0.20": {
+    "Microsoft.Data.Sqlite.Core/8.0.21": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-rsceqxvqaCKbASZahYa8chNdEtCghU2JErugi+Ngs/ds2QJrQixsSomGSFCR7219xQXMiz2pSrWshwm/DHqqNw==",
-      "path": "microsoft.data.sqlite.core/8.0.20",
-      "hashPath": "microsoft.data.sqlite.core.8.0.20.nupkg.sha512"
+      "sha512": "sha512-a8PghOiQP0QKGkbYl2Vu9IqOrqWDPBCPOSdfglNRbUezis0agAEs+S5dqdoSPSIR9dJavKNxjsDJR2U+bN6HzQ==",
+      "path": "microsoft.data.sqlite.core/8.0.21",
+      "hashPath": "microsoft.data.sqlite.core.8.0.21.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore/9.0.9": {
       "type": "package",
@@ -876,19 +876,19 @@
       "path": "microsoft.entityframeworkcore.relational/9.0.9",
       "hashPath": "microsoft.entityframeworkcore.relational.9.0.9.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Sqlite/8.0.20": {
+    "Microsoft.EntityFrameworkCore.Sqlite/8.0.21": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-mfN7QNt7vJAsPSfSTK+U9NDYaqKwl43MSKRZeSaNLAEEn5vCSyu3A58/wdTxE0K61IkiASZBtPmXRXFgZtzqbA==",
-      "path": "microsoft.entityframeworkcore.sqlite/8.0.20",
-      "hashPath": "microsoft.entityframeworkcore.sqlite.8.0.20.nupkg.sha512"
+      "sha512": "sha512-MaDcIErHWXfI2TB4iKerSSgtBgxW8YAectpavVN2bUT/NzsCK4blvnjBucEeh1jCv7QnY/Gqo0tbtl2UKe7evQ==",
+      "path": "microsoft.entityframeworkcore.sqlite/8.0.21",
+      "hashPath": "microsoft.entityframeworkcore.sqlite.8.0.21.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Sqlite.Core/8.0.20": {
+    "Microsoft.EntityFrameworkCore.Sqlite.Core/8.0.21": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-8M2SSavQ5q4c1Lk/wUGB9WRvfUdYuRHNa2dYUmQUxAL2rKSBdJSX6DBWTVaNW11MNxr0yqSNSHuscEkRajBS3g==",
-      "path": "microsoft.entityframeworkcore.sqlite.core/8.0.20",
-      "hashPath": "microsoft.entityframeworkcore.sqlite.core.8.0.20.nupkg.sha512"
+      "sha512": "sha512-KVnL6RbQkFOlRCu/cL7RA4GANOEdGU5R9jG09lQJ2227RPvZ7Cq+LwfhRZDqyLWA6fp5F6EVbYzhyW0pcih5hA==",
+      "path": "microsoft.entityframeworkcore.sqlite.core/8.0.21",
+      "hashPath": "microsoft.entityframeworkcore.sqlite.core.8.0.21.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.SqlServer/9.0.9": {
       "type": "package",
