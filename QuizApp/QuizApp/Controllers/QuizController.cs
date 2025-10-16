@@ -11,7 +11,7 @@ namespace QuizApp.Controllers
         public QuizController(QuizDBContext db) => _db = db; 
         //A Get method to create a new quiz with variables from models
         [HttpGet]
-        public IActionResult CreateQuiz()
+        public IActionResult Create()
         {
             var quiz = new Quiz
             {
@@ -32,11 +32,13 @@ namespace QuizApp.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult CreateQuiz(Quiz quiz)
+        public IActionResult Create(Quiz quiz)
         {
             if (ModelState.IsValid)
             {
-                // Here you would typically save the quiz to a database
+                //Save the quiz to a database
+                _db.Quizzes.Add(quiz);
+                _db.SaveChanges();
                 // For this example, we'll just redirect to a confirmation page
                 return RedirectToAction("Index", "Home");
             }

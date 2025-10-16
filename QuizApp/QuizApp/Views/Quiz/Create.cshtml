@@ -1,4 +1,5 @@
 @model QuizApp.Models.Quiz
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 @{
     ViewData["Title"] = "Create Quiz";
@@ -9,7 +10,7 @@
 <h2>@ViewData["Title"]</h2>
 
 @*form uses the CreateQuiz action in the Quiz controller*@
-<form asp-action="CreateQuiz" method="post">
+<form asp-action="Create" asp-controller="Quiz" method="post">
     @Html.AntiForgeryToken()
 
     @*This div creates an input where user can create title for the quiz*@
