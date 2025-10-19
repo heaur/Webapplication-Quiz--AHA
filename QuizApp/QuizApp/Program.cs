@@ -8,6 +8,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
+var dbPath = Path.Combine(builder.Environment.ContentRootPath, "QuizDatabase.db");
+builder.Services.AddDbContext<QuizDBContext>(opt =>
+    opt.UseSqlite($"Data Source={dbPath}"));
+
 // DbContext (SQLite)
 builder.Services.AddDbContext<QuizDBContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));

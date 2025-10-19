@@ -11,8 +11,8 @@ using QuizApp.Models;
 namespace QuizApp.Migrations
 {
     [DbContext(typeof(QuizDBContext))]
-    [Migration("20251019153831_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20251019163008_Baseline")]
+    partial class Baseline
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
