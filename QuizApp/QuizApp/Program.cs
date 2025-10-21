@@ -11,13 +11,26 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<QuizDBContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+// Build and configure the app later after registering session services (only one Build call will remain).
+
+    // 3) Sessions (so we can remember logged-in users between requests)
+//    - Distributed memory cache is required by Session.
+//    - You can fine-tune cookie name, lifetime, etc.
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.Cookie.Name = ".QuizApp.Session";
+    options.IdleTimeout = TimeSpan.FromMinutes(60); // user stays logged in for up to 60 min of inactivity
+    options.Cookie.HttpOnly = true;                 // mitigate XSS
+    options.Cookie.IsEssential = true;              // allow even if user hasn't consented to non-essential cookies
+});
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Error handling & security headers
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -26,10 +39,15 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+// 4) Enable sessions BEFORE Authorization (so controllers can read/write session)
+app.UseSession();
+
 app.UseAuthorization();
 
+// Default route (covers UserController/Login/CreateUser etc.)
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
 
 app.Run();
