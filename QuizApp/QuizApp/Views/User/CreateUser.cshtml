@@ -1,0 +1,62 @@
+@model QuizApp.Models.User
+
+@{
+    ViewData["Title"] = "Create User";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+@*The form sends data (via POST) to the "CreateUser" action inside the "User" controller.*@
+
+<form asp-action="CreateUser" asp-controller="User" method="post">
+
+@*Displays validation messages for the entire form.*@
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    @Html.AntiForgeryToken()
+
+    @*Div for creating username*@
+    <div class="form-group">
+        @*Automatically generates a <label> for the Username property*@
+        <label asp-for="Username" class="control-label"></label>
+
+        @*Input field bound to the Username property in the model*@
+        <input asp-for="Username" class="form-control" placeholder="Enter username" />
+
+        @*Displays a specific validation message for this field*@
+        <span asp-validation-for="Username" class="text-danger"></span>
+    </div>
+
+    @*Div for creating password*@
+    <div class="form-group">
+        @*Label for Password*@
+        <label asp-for="Password" class="control-label"></label>
+
+        @*Password input (characters hidden while typing)*@
+        <input asp-for="Password" class="form-control" type="password" placeholder="Enter password" />
+
+        @*Validation message for Password*@
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+
+    @*Div for confirming created password*@
+    <div class="form-group">
+        @*This field is not part of the model but used to confirm the password*@
+        <label>Confirm Password</label>
+
+        @*Must have the same "name" as the controller parameter*@
+        <input name="passwordConfirm" type="password" class="form-control" placeholder="Re-enter password" />
+    </div>
+
+    @*Button for creating account*@
+    <button type="submit" class="btn btn-primary mt-3">Create Account</button>
+</form>
+
+<!-- 
+    This section loads JavaScript required for client-side validation.
+    It enables instant feedback before submitting the form 
+    (for example: “Username is required” without reloading the page).
+-->
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
