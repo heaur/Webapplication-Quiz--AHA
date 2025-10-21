@@ -99,5 +99,8 @@ namespace QuizApp.Controllers
             // Redirect to the home page after saving successfully
             return RedirectToAction("Index", "Home");
         }
+
+        
+
     }
 }
