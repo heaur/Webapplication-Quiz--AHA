@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/alisaibisevic/Desktop/ITPE3200 - Webapplikasjoner/Webapplication-Quiz--AHA/QuizApp/QuizApp/QuizApp.csproj": {}
+    "C:\\Users\\Astrid sin pc\\webprogrammering\\Webapplication-Quiz--AHA\\QuizApp\\QuizApp\\QuizApp.csproj": {}
   },
   "projects": {
-    "/Users/alisaibisevic/Desktop/ITPE3200 - Webapplikasjoner/Webapplication-Quiz--AHA/QuizApp/QuizApp/QuizApp.csproj": {
+    "C:\\Users\\Astrid sin pc\\webprogrammering\\Webapplication-Quiz--AHA\\QuizApp\\QuizApp\\QuizApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alisaibisevic/Desktop/ITPE3200 - Webapplikasjoner/Webapplication-Quiz--AHA/QuizApp/QuizApp/QuizApp.csproj",
+        "projectUniqueName": "C:\\Users\\Astrid sin pc\\webprogrammering\\Webapplication-Quiz--AHA\\QuizApp\\QuizApp\\QuizApp.csproj",
         "projectName": "QuizApp",
-        "projectPath": "/Users/alisaibisevic/Desktop/ITPE3200 - Webapplikasjoner/Webapplication-Quiz--AHA/QuizApp/QuizApp/QuizApp.csproj",
-        "packagesPath": "/Users/alisaibisevic/.nuget/packages/",
-        "outputPath": "/Users/alisaibisevic/Desktop/ITPE3200 - Webapplikasjoner/Webapplication-Quiz--AHA/QuizApp/QuizApp/obj/",
+        "projectPath": "C:\\Users\\Astrid sin pc\\webprogrammering\\Webapplication-Quiz--AHA\\QuizApp\\QuizApp\\QuizApp.csproj",
+        "packagesPath": "C:\\Users\\Astrid sin pc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Astrid sin pc\\webprogrammering\\Webapplication-Quiz--AHA\\QuizApp\\QuizApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/alisaibisevic/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Astrid sin pc\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -37,8 +37,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -64,20 +63,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.20, 8.0.20]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.osx-arm64",
-              "version": "[8.0.20, 8.0.20]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.20, 8.0.20]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -86,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.415/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
