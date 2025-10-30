@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hedda\\OneDrive\\01 Anvendt data\\5. Semester\\ITPE3200\\Webapplication Quiz, AHA\\QuizApp\\QuizApp\\QuizApp.csproj": {}
+    "C:\\Users\\Astrid sin pc\\Documents\\høst2025\\Webapplikasjoner\\AHA\\Webapplication-Quiz--AHA\\QuizApp\\QuizApp\\QuizApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hedda\\OneDrive\\01 Anvendt data\\5. Semester\\ITPE3200\\Webapplication Quiz, AHA\\QuizApp\\QuizApp\\QuizApp.csproj": {
+    "C:\\Users\\Astrid sin pc\\Documents\\høst2025\\Webapplikasjoner\\AHA\\Webapplication-Quiz--AHA\\QuizApp\\QuizApp\\QuizApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hedda\\OneDrive\\01 Anvendt data\\5. Semester\\ITPE3200\\Webapplication Quiz, AHA\\QuizApp\\QuizApp\\QuizApp.csproj",
+        "projectUniqueName": "C:\\Users\\Astrid sin pc\\Documents\\høst2025\\Webapplikasjoner\\AHA\\Webapplication-Quiz--AHA\\QuizApp\\QuizApp\\QuizApp.csproj",
         "projectName": "QuizApp",
-        "projectPath": "C:\\Users\\Hedda\\OneDrive\\01 Anvendt data\\5. Semester\\ITPE3200\\Webapplication Quiz, AHA\\QuizApp\\QuizApp\\QuizApp.csproj",
-        "packagesPath": "C:\\Users\\Hedda\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hedda\\OneDrive\\01 Anvendt data\\5. Semester\\ITPE3200\\Webapplication Quiz, AHA\\QuizApp\\QuizApp\\obj\\",
+        "projectPath": "C:\\Users\\Astrid sin pc\\Documents\\høst2025\\Webapplikasjoner\\AHA\\Webapplication-Quiz--AHA\\QuizApp\\QuizApp\\QuizApp.csproj",
+        "packagesPath": "C:\\Users\\Astrid sin pc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Astrid sin pc\\Documents\\høst2025\\Webapplikasjoner\\AHA\\Webapplication-Quiz--AHA\\QuizApp\\QuizApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Hedda\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Astrid sin pc\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -75,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.413/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.415/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
