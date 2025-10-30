@@ -9,3 +9,28 @@
 
 @*Page title *@
 <h2>@ViewData["Title"]</h2>
+
+<form class="quiz-form" method="post">
+@Html.AntiForgeryToken()
+
+<div id="quizContainer">
+    @for (int q = 0; q < Model.Questions.Count; q++)
+    {
+        @*Div for one question with options*@
+        <div class="card">
+            <h3>Question @(q + 1): @Model.Questions[q].Text</h3>
+
+            @*Div for options*@
+            <div class="options">
+                @for (int o = 0; o < Model.Questions[q].Options.Count; o++)
+                {
+                    <div class="option">
+                        <input type="radio" id="q@(q)_o@(o)" name="Questions[@q].SelectedOption" value="@Model.Questions[q].Options[o].Text" />
+                        <label for="q@(q)_o@(o)">@Model.Questions[q].Options[o].Text</label>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+</div>
+</form>
