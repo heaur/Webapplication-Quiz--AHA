@@ -12,6 +12,7 @@
 
 <form class="quiz-form" method="post">
 @Html.AntiForgeryToken()
+<input type="hidden" id="quizId" value="@Model.QuizId" />
 
 <div id="quizContainer">
     @for (int q = 0; q < Model.Questions.Count; q++)
